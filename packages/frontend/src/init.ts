@@ -50,6 +50,22 @@ import { fetchCustomEmojis } from './custom-emojis';
 
 console.info(`Misskey v${version}`);
 
+document.head.appendChild(Object.assign(document.createElement('script'), {
+	async: true,
+	src: 'https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js',
+}));
+
+document.head.appendChild(Object.assign(document.createElement('script'), {
+	async: true,
+	src: 'https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js',
+}));
+/*
+const inner = '<meting-js server="" theme="#F58EA8" mini="true" ' +
+	'type="playlist" id="" fixed="true" autoplay="false" loop="all" order="random" preload="auto"></meting-js>';
+const metingjs = document.createRange().createContextualFragment(inner);
+document.body.insertBefore(metingjs, document.body.lastElementChild);
+*/
+
 if (_DEV_) {
 	console.warn('Development mode!!!');
 
